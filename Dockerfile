@@ -9,4 +9,4 @@ RUN pip install Flask
 # COPY app.py .
 EXPOSE 5000
 # Start python app "app.py"
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT ["python", "lbg.py"]
