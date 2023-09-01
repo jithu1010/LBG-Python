@@ -1,12 +1,12 @@
 # Copy python image from the docker hub
-FROM python:3.9-alpine
+FROM python:3.11
 # Working directory
 WORKDIR /app
 # Copy the application files to the container
 COPY . .
 # Install Python
-RUN pip install Flask
+RUN pip install -r requirements.txt
 # COPY app.py .
 EXPOSE 5000
-# Start python app "app.py"
+# Use python to run the file "app.py"
 ENTRYPOINT ["python", "lbg.py"]
